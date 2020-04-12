@@ -1,0 +1,20 @@
+                if(i >=1 && j >= 1 && "0".equals(buttons[i - 1][j - 1].getName()) && !"0".equals(buttons[i - 1][j - 1].getText())) {
+                    buttons[i - 1][j - 1].setEnabled(false);
+                    buttons[i - 1][j - 1].setText("0");
+                    checkAdjacent(i - 1, j - 1);
+                }
+                if(i < this.boardSize - 1 && j < this.boardSize - 1 && "0".equals(buttons[i + 1][j + 1].getName()) && !"0".equals(buttons[i + 1][j + 1].getText())) {
+                    buttons[i + 1][j + 1].setEnabled(false);
+                    buttons[i + 1][j + 1].setText("0");
+                    checkAdjacent(i + 1, j + 1);
+                }
+                if(i >= 1 && j < this.boardSize - 1 && "0".equals(buttons[i - 1][j + 1].getName()) && !"0".equals(buttons[i - 1][j + 1].getText())) {
+                    buttons[i - 1][j + 1].setEnabled(false);
+                    buttons[i - 1][j + 1].setText("0");
+                    checkAdjacent(i - 1, j + 1);
+                }
+                if(j >= 1 && i < this.boardSize - 1 && "0".equals(buttons[i + 1][j - 1].getName()) && !"0".equals(buttons[i + 1][j - 1].getText())) {
+                    buttons[i + 1][j - 1].setEnabled(false);
+                    buttons[i + 1][j - 1].setText("0");
+                    checkAdjacent(i + 1, j - 1);
+                }
